@@ -6,7 +6,7 @@ esbuild.build({
   bundle: true,
   outfile: 'dist/bundle.js',
   sourcemap: false,
-  minify: false,
+  minify: true,
   target: ['es2020'],
   platform: 'node', 
   format: 'esm',

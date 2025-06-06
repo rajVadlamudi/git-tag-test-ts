@@ -1,7 +1,1 @@
-// src/index.ts
-var Greet = () => {
-  return "Hello its git tag test ts repo v1.0.0 ";
-};
-export {
-  Greet
-};
+var t=()=>"Hello its git tag test ts repo v1.0.2 ";export{t as Greet};
