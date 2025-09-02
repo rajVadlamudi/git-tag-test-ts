@@ -13,7 +13,7 @@ jobs:
 
         - uses: actions/setup-node@v2
 
-        - uses: echo "Output test message"
+        - run: echo "Output test message"
 
         - run: git fetch
 
