@@ -18,5 +18,3 @@ jobs:
         - run: git fetch
 
         - run: npm install
-
-        - run: npm run build
