@@ -1,10 +1,11 @@
 // build.config.js
-const esbuild = require('esbuild');
+// const esbuild = require('esbuild');
+import esbuild from 'esbuild'
 
 esbuild.build({
   entryPoints: ['src/index.ts'],
   bundle: true,
-  outfile: 'src/index.js',
+  outfile: 'dist/index.js',
   sourcemap: false,
   minify: true,
   target: ['es2020'],
