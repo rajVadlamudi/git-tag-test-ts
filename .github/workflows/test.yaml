@@ -9,11 +9,14 @@ jobs:
   test-release-branch:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v4
-        uses: actions/setup-node@v2
-          with:
-            node-version: '22'
-        uses: echo "Output test message"
-        run: git fetch
-        run: npm install
-        run: npm build
+        - uses: actions/checkout@v4
+
+        - uses: actions/setup-node@v2
+
+        - uses: echo "Output test message"
+
+        - run: git fetch
+
+        - run: npm install
+
+        - run: npm build
