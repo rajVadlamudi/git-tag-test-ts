@@ -1,0 +1,16 @@
+name: Test
+on:
+ workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  test-release-branch:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+
+        - uses: actions/setup-node@v2
+
+        - run: echo "Output semver message"
