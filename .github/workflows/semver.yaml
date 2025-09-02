@@ -1,26 +1,30 @@
 name: Semver
-on:
- workflow_dispatch
 
-permissions:
-  contents: write
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  test-release-branch:
+  release:
     runs-on: ubuntu-latest
+
     steps:
-        - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for semantic-release and git history
 
-        - uses: actions/setup-node@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-        - run: echo "Output semver message"
+      - run: npm ci
 
-        - run: npm install
+      - name: Build project
+        run: npm run build
 
-        - run: git fetch
-        
-
-        - name: create semantic release
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-          run: npx semantic-release
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release

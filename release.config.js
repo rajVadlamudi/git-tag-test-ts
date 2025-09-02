@@ -1,11 +1,17 @@
 export default 
-    {
-        "branches": ["release-test"],
-        "plugins": [
-          "@semantic-release/commit-analyzer",
-          "@semantic-release/release-notes-generator",
-          "@semantic-release/git",
-          "@semantic-release/github"
-        ]
-      }
+{
+  branches: ['main'],
+  plugins: [
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
+    '@semantic-release/changelog',
+    '@semantic-release/npm',
+    [
+      '@semantic-release/github',
+      {
+        assets: ['dist/index.js'],
+      },
+    ],
+  ],
+};
       
