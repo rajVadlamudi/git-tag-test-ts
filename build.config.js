@@ -4,7 +4,7 @@ const esbuild = require('esbuild');
 esbuild.build({
   entryPoints: ['src/index.ts'],
   bundle: true,
-  outfile: 'dist/bundle.js',
+  outfile: 'src/index.js',
   sourcemap: false,
   minify: true,
   target: ['es2020'],

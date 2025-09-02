@@ -1,0 +1,22 @@
+{
+    "category1":[
+        {
+            "type": "1",
+            "description":"test1"
+        },
+        {
+            "type": "2",
+            "description":"test2"
+        }
+    ],
+    "category2":[
+        {
+            "type": "1",
+            "description":"test1"
+        },
+        {
+            "type": "2",
+            "description":"test2"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+name: Test
+on:
+ push:
+
+permissions:
+  contents: write
+
+jobs:
+  test-release-branch:
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Test Echo
+        uses: echo "Output test message"

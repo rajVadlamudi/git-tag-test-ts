@@ -2,12 +2,22 @@
     "name": "git-tag-test",
     "version": "1.0.3",
     "scripts": {
-        "build": "node build.config.js"
+        "build": "tsc && node build.config.js",
+        "test": "jest",
+        "dev": "node --loader ts-node/esm src/index.ts"
     },
+    "type": "module",
     "devDependencies": {
         "@types/express": "^5.0.2",
+        "@types/jest": "^30.0.0",
         "@types/lodash": "^4.17.17",
         "esbuild": "^0.25.5",
+        "jest": "^30.0.1",
+        "ts-jest": "^29.4.0",
+        "ts-node": "^10.9.2",
         "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "@types/node": "^24.0.4"
     }
 }
