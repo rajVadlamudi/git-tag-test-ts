@@ -14,3 +14,13 @@ jobs:
         - uses: actions/setup-node@v2
 
         - run: echo "Output semver message"
+
+        - run: npm install
+
+        - run: git fetch
+        
+
+        - name: create semantic release
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          run: npx semantic-release
