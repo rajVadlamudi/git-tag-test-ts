@@ -13,7 +13,7 @@ jobs:
 
         - uses: actions/setup-node@v2
 
-        - run: echo "Output test message"
+        - run: echo "Output test message  $(git describe --tags --abbrev=0)"
 
         - run: git fetch
 
